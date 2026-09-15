@@ -53,7 +53,7 @@ export default function PortfolioView({ projects, experiences, skills }: { proje
                             </button>
                         ))}
                         <button onClick={() => nav.scrollTo("contact")} className="w-full text-center px-5 py-2.5 bg-neutral-900 text-white text-sm font-medium rounded-lg hover:bg-indigo-600 transition-colors mt-2 shadow-xs">
-                            ติดต่อฉัน
+                            contact me
                         </button>
                     </div>
                 </div>

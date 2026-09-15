@@ -11,13 +11,13 @@ export const EXPERIENCES: Experience[] = [
     period: "2025",
     description: "Internship project developing a job-ordering/receiving application for trucking companies and an admin dashboard website using React.js, Tailwind CSS, React Native, Node.js, express, and MySQL in collaboration with team members to create applications that meet client needs.",
   },
-  {
-    id: 2,
-    role: "Web Developer",
-    company: "",
-    period: "2025 - 2026",
-    description: "Developed a freelance job-matching platform connecting developers with clients as a capstone project, utilizing React, JavaScript, Tailwind CSS, Node.js, Express, and MongoDB.",
-  },
+  // {
+  //   id: 2,
+  //   role: "Web Developer",
+  //   company: "",
+  //   period: "2025 - 2026",
+  //   description: "Developed a freelance job-matching platform connecting developers with clients as a capstone project, utilizing React, JavaScript, Tailwind CSS, Node.js, Express, and MongoDB.",
+  // },
 ]
 
 export const PROJECTS: Project[] = [
