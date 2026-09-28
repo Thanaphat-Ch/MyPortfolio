@@ -12,6 +12,7 @@ import {
   Moon, 
   Github 
 } from "lucide-react";
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 interface FloatingDockProps {
   activeSection?: string;
@@ -96,14 +97,14 @@ export default function FloatingDock({
           aria-label="GitHub Profile"
           className="group relative flex items-center justify-center w-10 h-10 rounded-full text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200"
         >
-          <Github size={18} className="transition-transform group-hover:scale-110" />
+          <Github size={18} className="transition-transform duration-200 group-hover:-translate-y-1 group-hover:rotate-6" />
           <span className="absolute -top-9 px-2 py-1 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-xs rounded-md shadow-md opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all pointer-events-none whitespace-nowrap">
             GitHub
           </span>
         </a>
 
         {/* Theme Toggle */}
-        <button
+        {/* <button
           onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
           aria-label="Toggle Theme"
           className="group relative flex items-center justify-center w-10 h-10 rounded-full text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
@@ -121,7 +122,26 @@ export default function FloatingDock({
           <span className="absolute -top-9 px-2 py-1 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-xs rounded-md shadow-md opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all pointer-events-none whitespace-nowrap">
             {mounted && resolvedTheme === "dark" ? "Light Mode" : "Dark Mode"}
           </span>
-        </button>
+        </button> */}
+        <AnimatedThemeToggler
+          theme={mounted ? (resolvedTheme as "light" | "dark") : "light"}
+          onThemeChange={(newTheme) => setTheme(newTheme)}
+          className="group relative flex items-center justify-center w-10 h-10 rounded-full text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 cursor-pointer"
+        >
+          {mounted ? (
+            resolvedTheme === "dark" ? (
+              <Sun size={18} className="transition-transform group-hover:rotate-45" />
+            ) : (
+              <Moon size={18} className="transition-transform group-hover:-rotate-12" />
+            )
+          ) : (
+            <div className="w-4.5 h-4.5" />
+          )}
+
+          <span className="absolute -top-9 px-2 py-1 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-xs rounded-md shadow-md opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all pointer-events-none whitespace-nowrap">
+            {mounted && resolvedTheme === "dark" ? "Light Mode" : "Dark Mode"}
+          </span>
+        </AnimatedThemeToggler>
       </div>
     </nav>
   );

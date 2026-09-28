@@ -182,3 +182,7 @@
 .heading-2 {
   @apply flex items-center gap-2 mb-2 sm:mb-4 font-semibold;
 }
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}

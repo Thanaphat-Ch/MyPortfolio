@@ -11,7 +11,6 @@ import FloatingDock from "./Navigation";
 import { Meteors } from "./ui/meteors";
 import { AnimatedGridPattern } from "./ui/animated-grid-pattern";
 
-
 export default function PortfolioView({ projects, experiences, skills }: { projects: Project[], experiences: Experience[], skills: Skill[] }) {
     const nav = useNavigation()
     const lightbox = useProjectLightbox()
@@ -50,21 +49,6 @@ export default function PortfolioView({ projects, experiences, skills }: { proje
                                 </p>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                <section id="skills" className="delay-100">
-                    <h4 className="heading-1"> Skills </h4>
-                    <div className="flex flex-wrap gap-2.5 sm:gap-3">
-                        {skills.map((skill) => {
-                            const IconComponent: React.FC<{ className?: string }> = skill.icon;
-                            return (
-                                <span key={skill.name} className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-background text-foreground text-xs sm:text-sm font-medium border border-border ring-2 ring-border/20 rounded-xl hover:border-primary hover:bg-indigo-50/30 transition-all duration-300 cursor-default shadow-xs reveal delay-100">
-                                    <IconComponent className={`text-base sm:text-lg ${skill.color}`} />
-                                    {skill.name}
-                                </span>
-                            );
-                        })}
                     </div>
                 </section>
 
@@ -112,6 +96,21 @@ export default function PortfolioView({ projects, experiences, skills }: { proje
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </section>
+
+                <section id="skills" className="delay-100">
+                    <h4 className="heading-1"> Skills </h4>
+                    <div className="flex flex-wrap gap-2.5 sm:gap-3">
+                        {skills.map((skill) => {
+                            const IconComponent: React.FC<{ className?: string }> = skill.icon;
+                            return (
+                                <span key={skill.name} className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-background text-foreground text-xs sm:text-sm font-medium border border-border ring-2 ring-border/20 rounded-xl hover:border-primary hover:bg-indigo-50/30 transition-all duration-300 cursor-default shadow-xs reveal delay-100">
+                                    <IconComponent className={`text-base sm:text-lg ${skill.color}`} />
+                                    {skill.name}
+                                </span>
+                            );
+                        })}
                     </div>
                 </section>
 
