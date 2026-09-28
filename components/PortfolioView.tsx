@@ -8,6 +8,8 @@ import { useScrollReveal } from "@/Hooks/useScrollReveal"
 import ProjectLightbox from "./ProjectLightbox";
 import { Project, Experience, Skill } from "@/types";
 import FloatingDock from "./Navigation";
+import { Meteors } from "./ui/meteors";
+import { AnimatedGridPattern } from "./ui/animated-grid-pattern";
 
 
 export default function PortfolioView({ projects, experiences, skills }: { projects: Project[], experiences: Experience[], skills: Skill[] }) {
@@ -18,12 +20,18 @@ export default function PortfolioView({ projects, experiences, skills }: { proje
 
     return (
         <div className="min-h-screen font-sans text-foreground bg-background selection:bg-primary selection:text-primary-foreground">
-            <main className="flex flex-col gap-16 py-24 md:py-28 lg:pt-32 px-6 sm:px-16 max-w-3xl mx-auto">
+            <div className="h-10 w-full overflow-hidden inset-0 pointer-events-none -z-10">
+                {/* <Meteors number={25} maxDuration={4} /> */}
+                <AnimatedGridPattern 
+                    className="[mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)]"
+                />
+            </div>  
+            <main className="flex flex-col gap-16 py-24 md:py-28 lg:pt-32 px-6 sm:px-16 max-w-3xl mx-auto bg-transparent z-10">
                 <section id="home" className="flex flex-col relative overflow-hidden ">
                     <div className="grid gap-12 animate-fade-in-up w-full relative z-10 ">
                         <div className="text-left space-y-4 ">
                             <h1 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]">
-                                Hi, I&apos;m <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-600 to-neutral-900">Thanaphat</span>
+                                Hi, I&apos;m <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-600 to-foreground">Thanaphat</span>
                             </h1>
                             <p className="text-base text-muted-foreground sm:text-xl max-w-lg leading-relaxed">
                                 Software Developer with a passion for creating clean, minimal, and functional web and mobile applications.
