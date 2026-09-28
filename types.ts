@@ -3,6 +3,7 @@ import { IconType } from "react-icons/lib";
 // types.ts
 export type Experience = {
   id: number
+  logo: string
   role: string
   company: string
   period: string

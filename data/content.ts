@@ -6,9 +6,10 @@ import { SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTai
 export const EXPERIENCES: Experience[] = [
   {
     id: 1,
+    logo: "",
     role: "Mobile Application Developer",
     company: "Magnitude plus Co., Ltd.",
-    period: "2025",
+    period: "JUN 2025 - DEC 2025",
     description: "Internship project developing a job-ordering/receiving application for trucking companies and an admin dashboard website using React.js, Tailwind CSS, React Native, Node.js, express, and MySQL in collaboration with team members to create applications that meet client needs.",
   },
   // {
