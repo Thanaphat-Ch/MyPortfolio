@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
     image: "/freelancefreely/freelancefreely.png",
     description: "A freelance job-matching platform that connects developers with clients seeking tech services.",
     tech: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
-    link: "https://freelancefreely.vercel.app/",
+    link: "https://freelancefreelys.vercel.app/",
     screenshots: ["/freelancefreely/1.png", "/freelancefreely/2.png", "/freelancefreely/3.png", "/freelancefreely/4.png", "/freelancefreely/5.png"],
   },
   {
