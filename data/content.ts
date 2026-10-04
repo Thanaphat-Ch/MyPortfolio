@@ -28,12 +28,21 @@ export const PROJECTS: Project[] = [
     category: "Web Application",
     image: "/freelancefreely/freelancefreely.png",
     description: "A freelance job-matching platform that connects developers with clients seeking tech services.",
-    tech: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+    tech: ["React", "JavaScript", "Tailwind CSS", "Express.js", "MongoDB"],
     link: "https://freelancefreelys.vercel.app/",
-    screenshots: ["/freelancefreely/1.png", "/freelancefreely/2.png", "/freelancefreely/3.png", "/freelancefreely/4.png", "/freelancefreely/5.png"],
+    // screenshots: ["/freelancefreely/1.png", "/freelancefreely/2.png", "/freelancefreely/3.png", "/freelancefreely/4.png", "/freelancefreely/5.png"],
   },
   {
     id: 2,
+    title: "Admin Dashboard",
+    category: "Web Application",
+    image: "/Admin_Dashboard.png",
+    description: "An operations dashboard for tracking job progress and managing driver profiles.",
+    tech: ["React", "JavaScript", "Tailwind CSS", "Express.js", "MariaDB"],
+    link: "https://magplusdashboard.vercel.app/",
+  },
+  {
+    id: 3,
     title: "AI Crop Prediction System",
     category: "AI / Data Science",
     image: "/Crop_Prediction_System.png",
@@ -42,7 +51,7 @@ export const PROJECTS: Project[] = [
     link: "https://crop-prediction-system.streamlit.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Mask Detection System",
     category: "AI / Computer Vision",
     image: "/Mask_Detection_System.png",
@@ -50,15 +59,15 @@ export const PROJECTS: Project[] = [
     tech: ["HTML", "JavaScript", "TensorFlow.js"],
     link: "https://thanaphat-ch.github.io/maskDetection/",
   },
-  {
-    id: 4,
-    title: "To-Do List Application",
-    category: "Web Application",
-    image: "/todo.png",
-    description: "A to-do list web application with a secure member system, allowing users to easily manage their daily tasks.",
-    tech: ["Next.js", "NextAuth", "Supabase"],
-    link: "https://todo-list-thanaphat.vercel.app/",
-  },
+  // {
+  //   id: 5,
+  //   title: "To-Do List Application",
+  //   category: "Web Application",
+  //   image: "/todo.png",
+  //   description: "A to-do list web application with a secure member system, allowing users to easily manage their daily tasks.",
+  //   tech: ["Next.js", "NextAuth", "Supabase"],
+  //   link: "https://todo-list-thanaphat.vercel.app/",
+  // },
 ]
 
 export const SKILLS: Skill[] = [
