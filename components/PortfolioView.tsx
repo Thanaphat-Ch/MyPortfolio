@@ -8,7 +8,6 @@ import { useScrollReveal } from "@/Hooks/useScrollReveal"
 import ProjectLightbox from "./ProjectLightbox";
 import { Project, Experience, Skill } from "@/types";
 import FloatingDock from "./Navigation";
-import { Meteors } from "./ui/meteors";
 import { AnimatedGridPattern } from "./ui/animated-grid-pattern";
 
 export default function PortfolioView({ projects, experiences, skills }: { projects: Project[], experiences: Experience[], skills: Skill[] }) {
@@ -21,9 +20,7 @@ export default function PortfolioView({ projects, experiences, skills }: { proje
         <div className="min-h-screen font-sans text-foreground bg-background selection:bg-primary selection:text-primary-foreground">
             <div className="h-10 w-full overflow-hidden inset-0 pointer-events-none -z-10">
                 {/* <Meteors number={25} maxDuration={4} /> */}
-                <AnimatedGridPattern 
-                    className="[mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)]"
-                />
+                <AnimatedGridPattern className={`mask-[linear-gradient(to_bottom,white_60%,transparent_100%)]`} />
             </div>  
             <main className="flex flex-col gap-16 py-24 md:py-28 lg:pt-32 px-6 sm:px-16 max-w-3xl mx-auto bg-transparent z-10">
                 <section id="home" className="flex flex-col relative overflow-hidden ">
