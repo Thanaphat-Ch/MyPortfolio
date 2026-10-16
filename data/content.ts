@@ -34,8 +34,17 @@ export const PROJECTS: Project[] = [
     tech: ["React", "JavaScript", "Tailwind CSS", "Express.js", "MariaDB"],
     link: "https://magplusdashboard.vercel.app/",
   },
-  {
+ {
     id: 3,
+    title: "Table Booking System",
+    category: "Web Application",
+    image: "/Booking_System.png", 
+    description: "Real-Time Online Table Reservation System featuring a mobile-friendly booking form and queue summary, designed for fast and seamless mobile use.",
+    tech: ["Next.js", "Tailwind CSS", "Supabase"],
+    link: "https://jong-app.vercel.app/",
+  },
+  {
+    id: 4,
     title: "AI Crop Prediction System",
     category: "AI / Data Science",
     image: "/Crop_Prediction_System.png",
@@ -44,7 +53,7 @@ export const PROJECTS: Project[] = [
     link: "https://crop-prediction-system.streamlit.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Mask Detection System",
     category: "AI / Computer Vision",
     image: "/Mask_Detection_System.png",
@@ -53,7 +62,7 @@ export const PROJECTS: Project[] = [
     link: "https://thanaphat-ch.github.io/maskDetection/",
   },
   // {
-  //   id: 5,
+  //   id: 6,
   //   title: "To-Do List Application",
   //   category: "Web Application",
   //   image: "/todo.png",
