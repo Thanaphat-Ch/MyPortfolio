@@ -1,7 +1,7 @@
 "use client"
 
 import type { Experience, Project, Skill } from "@/types"
-import { SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiExpress, SiMysql } from "react-icons/si"
+import { SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiExpress, SiMysql, SiDotnet, SiNestjs } from "react-icons/si"
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -80,8 +80,10 @@ export const SKILLS: Skill[] = [
   { name: "React", icon: SiReact, color: "text-sky-400" },
   { name: "React Native", icon: SiReact, color: "text-sky-500" },
   { name: "Next.js", icon: SiNextdotjs, color: "text-black" },
-  { name: "express.js", icon: SiExpress, color: "text-gray-600" },
+  { name: "Nest.js", icon: SiNestjs, color: "text-red-600" },
+  { name: "Express.js", icon: SiExpress, color: "text-gray-600" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-400" },
   { name: "MySQL", icon: SiMysql, color: "text-blue-800" },
+  { name: "ASP.NET Core", icon: SiDotnet, color: "text-purple-800" },
   // { name: "Figma", icon: SiFigma, color: "text-pink-500" },
 ]
